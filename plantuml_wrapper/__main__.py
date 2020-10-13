@@ -4,7 +4,7 @@
 import os
 import sys
 import shutil
-import subprocess
+from subprocess import Popen
 
 JARFILE = "plantuml.jar"
 
@@ -31,7 +31,10 @@ def main():
     java = find_java()
     plantuml = find_plantuml()
     cmd = [java, "-jar", plantuml] + sys.argv[1:]
-    subprocess.check_output(cmd)
+    proc = Popen(cmd, stdin=sys.stdin.buffer, stdout=sys.stdout.buffer)
+    proc.communicate()
+    if proc.returncode:
+        raise Exception("plantuml failed")
 
 
 if __name__ == "__main__":
