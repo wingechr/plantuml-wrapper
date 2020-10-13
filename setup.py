@@ -7,7 +7,7 @@ if __name__ == "__main__":
         name="plantuml-wrapper",
         description="os independent wrapper around plantuml.jar",
         long_description="os independent wrapper around plantuml.jar",
-        version="0.0.2",
+        version="0.0.3",
         author="Christian Winger",
         author_email="c@wingechr.de",
         url="https://github.com/wingechr/plantuml-wrapper",
@@ -19,5 +19,5 @@ if __name__ == "__main__":
             "Programming Language :: Python :: 3.7",
             "Operating System :: OS Independent",
         ],
-        entry_points={"console_scripts": ["plantuml = plantuml_wrapper:main"]},
+        entry_points={"console_scripts": ["plantuml = plantuml_wrapper.__main__:main"]},
     )
