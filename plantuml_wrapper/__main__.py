@@ -19,7 +19,7 @@ def find_java():
 
 def find_plantuml():
     """Return path to java plantuml.jar."""
-    for path in os.environ["path"].split(os.pathsep):
+    for path in os.environ.get("PATH", "").split(os.pathsep):
         path = os.path.join(path, JARFILE)
         if os.path.isfile(path):
             return path
