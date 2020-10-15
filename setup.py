@@ -7,7 +7,7 @@ if __name__ == "__main__":
         name="plantuml-wrapper",
         description="os independent wrapper around plantuml.jar",
         long_description="os independent wrapper around plantuml.jar",
-        version="0.0.6",
+        version="0.0.9",
         author="Christian Winger",
         author_email="c@wingechr.de",
         url="https://github.com/wingechr/plantuml-wrapper",
